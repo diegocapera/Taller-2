@@ -1,5 +1,20 @@
 # Taller-2
-#PUNTO 1
+**PUNTO 1**
+```Python
+numero = int(input("Ingresa un número entero: "))
+digitos = []
+
+while numero > 0:
+    digito = numero % 10
+    digitos.append(digito)
+    numero = numero // 10
+
+digitos.reverse()
+
+print("Los dígitos separados son: ")
+for digito in digitos:
+    print(digito)
+```
 
 Este código separa los dígitos de un número entero ingresado por el usuario y los muestra de manera individual.
 
@@ -9,13 +24,42 @@ A continuación, se usa un bucle “while” para dividir el número por 10 y al
 
 Después de obtener todos los dígitos, se utiliza la función “reverse()” para invertir el orden de los dígitos en la lista. Finalmente, se muestra cada dígito de la lista, uno por uno, usando un bucle “for” y la función “print()”.
 
-#PUNTO 2
+**PUNTO 2**
+```Python
+##Entrada un numero flotante
+#Salida un numero entero y un valor decimal
+numero = float(input("Por favor ingrese un numero:  "))
+def partes(a): #Se define la funcion
+  a = int(numero) #El numero ingresado por el usuarios
+  b = numero - a #La operacion que se hace para separar la parte entera de la decimal
+  print(f"La parte entera del numero es {a} y la parte decimal es {b}")
+partes(numero) #Se imprime por medio de la variable "partes"
+```
 
 Este código le pide al usuario que ingrese un número y lo almacena en la variable numero. Luego, se define una función llamada partes que toma un argumento a. Dentro de la función, el número ingresado por el usuario se convierte en un entero y se almacena en la variable a, mientras que la parte decimal del número se almacena en la variable b. Finalmente, la función imprime un mensaje que muestra la parte entera del número y la parte decimal.
 
 Por último, se llama a la función partes con el argumento numero, que es el número que el usuario ingresó anteriormente. De esta manera, la función se ejecuta y muestra la parte entera y la parte decimal del número ingresado por el usuario.
 
-#PUNTO 3
+**PUNTO 3**
+```Python
+#Numeros espejo
+numero1 = int(input("Por favor ingrese un numero:   "))
+numero2 = int(input("Por favor ingrese un numero:   "))
+def espejo(n,m):  
+  k = numero1
+  espejo = ""
+  while(k>0):
+    dig = k%10
+    sig = k//10
+    x = str(dig)
+    espejo+=x
+    k = sig
+  if(espejo == str(numero2)):
+    print(f"El numero {numero1} y el numero {numero2} son numeros espejo entre sí")
+  else:
+    print(f"El numero {numero1} y el numero {numero2} no son numeros espejo entre sí")
+espejo(numero1,numero2)
+```
 
 Este código pide al usuario que ingrese dos números enteros. Luego, define una función llamada "espejo" que toma dos argumentos "n" y "m", que son los números ingresados por el usuario.
 
@@ -25,7 +69,24 @@ Después del bucle, se compara la cadena "espejo" con el número ingresado por e
 
 Finalmente, se llama a la función "espejo" pasando los argumentos "numero1" y "numero2" que se recopilaron al principio del programa.
 
-#PUNTO 4
+**PUNTO 4**
+```Python
+#Coseno MacLaurin
+from math import *
+val = float(input("Ingrese el valor de coseno que desea aproximar:  "))
+error_x = float(input("Ingrese el error porcentual que necesita de aproximacion:  ")) #Se le pide el valor de coseno y el error porcentual al que desea saber su aproximacion
+n=0
+serie = 0
+a = ((-1)**n)*(val**(2*n))/factorial(2*n) #Se define la operacion que se va a hacer globalmente
+n+=1
+(1-(error_x/100))*cos(val)
+while(serie<((1-(error_x/100))*cos(val))): #Se deja claro la condicion que va a tener el ciclo para se cumplido
+  a = ((-1)**n)*(val**(2*n))/factorial(2*n) #La siguiente parte es donde se denota el proceso que se va a realizar para que dicho ciclo funcione
+  serie+=a
+  n+=1
+  error = (1-(serie/cos(val)))*100
+print(serie,"",error,"",n) #Se imprime 
+```
 
 Este código es un ejemplo de cómo se puede aproximar el valor del coseno de un número utilizando la serie de Maclaurin. En la primera línea se importa la función matemática de Python, que se utiliza para calcular el factorial de un número.
 
@@ -37,11 +98,86 @@ Dentro del ciclo, se calcula el término de la serie actual utilizando la fórmu
 
 Finalmente se calcula el error porcentual de la aproximación y se imprime el valor de la serie, el error y el número de términos sumados.
 
-#PUNTO 5
+**PUNTO 5**
+```Python
+print("Este programa le calcula el mcm y el mcd de n numeros")
+n = [int(x) for x in input("Por favor, ingrese los numeros separados por espacio:  ").split()]
+h = str(n)
+m = []
+primos = []
+listas = []
+pot = {}
+p=[]
+d=[]
+cont = 0
+while(len(n)>0):
+  factores=[]
+  for i in range(1,max(n)+1):
+    for j in range(1,max(n)+1):
+      if i%j==0:
+        cont+=1
+    if cont==2:
+      primos.append(i)
+    cont=0
+  k=max(n)
+  for i in primos:
+    while(k%i==0):
+      if k%i==0:
+        factores.append(i)
+        b = k//i
+        k=b
+  listas.insert(0,factores)
+  m.append(max(n))
+  n.remove(max(n))
+for i in range(len(listas)):
+  for j in range(len(listas[i])):
+    pot[listas[i][j]]=listas[i].count(listas[i][j])
+    p.append(pot)
+  pot={}
+for k in range(len(p)):
+  if p[k] not in d:
+    d.append(p[k])
+def final(di):
+  xd = 1
+  for z in di.keys():
+    f = z**(di.get(z))
+    xd*=f
+  return xd
+xddd= input("Que necesita consultar:    ")
+#mcm
+if(xddd.lower()=="mcm"):
+  claves = set(d[0].keys())
+  for i in d[1:]:
+    claves|=set(i.keys())
+  for c in claves:
+     valores = [x[c] for x in d if c in x]
+     pot[c] = max(valores)
+  print(f"El minimo comun multiplo de {h} es {final(pot)}")
+#mcd
+elif(xddd.lower()=="mcd"):
+  claves = set(d[0].keys())
+  for i in d[1:]:
+    claves&=set(i.keys())
+  for c in claves:
+     valores = [x[c] for x in d if c in x]
+     pot[c] = min(valores)
+  print(f"El maximo comun divisor de {h} es {final(pot)}")
+```
 
 Este código es un programa que calcula el MCM (mínimo común múltiplo) y el MCD (máximo común divisor) de una lista de números. Primero, el programa solicita al usuario que ingrese una lista de números separados por espacio, y los convierte a una lista de enteros. Luego, el programa utiliza un algoritmo que descompone cada número en sus factores primos y almacena estos factores en listas separadas. Después, el programa utiliza un conjunto de diccionarios para determinar los factores comunes de cada número de la lista. Finalmente, el programa calcula el MCM y el MCD utilizando los factores comunes. Si el usuario ingresa "mcm", el programa devuelve el MCM de los números, y si el usuario ingresa "mcd", el programa devuelve el MCD de los números. El código utiliza principalmente ciclos for y condicionales if para realizar los cálculos necesarios.
 
-#PUNTO 6
+**PUNTO 6**
+```Python
+#Repetidos
+elementos_x=[str(rep) for rep in input("Ingrese cualquier elemento a la lista, separados por espacios:  ").split()]
+repetidos=[]
+for i in elementos_x:
+  if elementos_x.count(i)>1:
+    repetidos.append(i)
+    elementos_x.remove(i)
+if(len(repetidos)==0):
+  print("En esta lista no existen elementos repetidos")
+````
 
 solicita al usuario que ingrese una lista de elementos separados por espacios. Luego, convierte cada elemento en un string y los almacena en la lista elementos_x.
 
@@ -49,7 +185,23 @@ Después, el código busca elementos repetidos en la lista elementos_x, utilizan
 
 Finalmente, si no hay elementos repetidos en la lista elementos_x, se imprime "En esta lista no existen elementos repetidos". En caso contrario, los elementos repetidos se almacenan en la lista repetidos pero no se imprimen en este código.
 
-#PUNTO 7
+**PUNTO 7**
+```Python
+#Contador de vocales
+palabra = [str(c) for c in input("Ingrese su cadena de caracteres:  ").split()]
+def contadorvocales(p):
+  vocales = ["a","e","i","o","u"]
+  cadena = ""
+  cont = 0
+  for i in p:
+    cadena+=i
+  for j in range(len(cadena)):
+    if cadena[j] in vocales:
+      cont+=1
+  if cont>=2:
+    print(cadena)
+contadorvocales(palabra)
+```
 
 Este programa tomará una cadena de caracteres del usuario, la dividirá en palabras y almacenará cada palabra en una lista llamada palabra. Luego, definirá una función llamada contadorvocales que toma la lista de palabras como argumento.
 
@@ -57,7 +209,23 @@ La función contadorvocales busca las vocales en cada palabra de la lista y cuen
 
 En resumen, el programa imprimirá todas las palabras de la lista que contengan al menos dos vocales.
 
-#PUNTO 8
+**PUNTO 8**
+```Python
+#no in
+lista_a = [int(x) for x in input("Ingrese los elementos separados por espacio:  ").split()]
+lista_b = [int(x) for x in input("Ingrese los elementos separados por espacio:  ").split()]
+if len(lista_b)>len(lista_a):
+  nv = lista_a
+  lista_a = lista_b
+  lista_b = nv
+descuadre = []
+for i in lista_a:
+  if i not in lista_b:
+    descuadre.append(i)
+print(lista_a)
+print(lista_b)
+print(descuadre)
+```
 
 Este código permite al usuario ingresar dos listas de números separados por espacio en la línea de comandos. Luego, se comprueba cuál de las dos listas es más larga. Si la segunda lista es más larga, se intercambian las listas.
 
@@ -66,7 +234,7 @@ Después, se crea una lista vacía llamada 'descuadre'. A continuación, se real
 Finalmente, el código imprime las listas 'lista_a', 'lista_b' y 'descuadre'. 'lista_a' y 'lista_b' son las listas originales ingresadas por el usuario, mientras que 'descuadre' es una lista de elementos que están presentes en 'lista_a' pero no en 'lista_b'.
 
 
-#PUNTO 10
+**PUNTO 10**
 
 Este programa en Python se encarga de verificar si una matriz es mágica, es decir, si la suma de los elementos de cada fila, cada columna y cada diagonal principal es igual.
 
