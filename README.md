@@ -110,6 +110,7 @@ Finalmente se calcula el error porcentual de la aproximación y se imprime el va
 
 Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
 ```Python
+#Minimo comun multiplo y maximo comun divisor
 print("Este programa le calcula el mcm y el mcd de n numeros")
 n = [int(x) for x in input("Por favor, ingrese los numeros separados por espacio:  ").split()]
 h = str(n)
@@ -180,7 +181,7 @@ Este código es un programa que calcula el MCM (mínimo común múltiplo) y el M
 
 Desarrollar un programa que determine si en una lista no existen elementos repetidos.
 ```Python
-#Repetidos
+#Elementos repetidos
 elementos_x=[str(rep) for rep in input("Ingrese cualquier elemento a la lista, separados por espacios:  ").split()]
 repetidos=[]
 for i in elementos_x:
@@ -227,7 +228,7 @@ En resumen, el programa imprimirá todas las palabras de la lista que contengan 
 
 Desarrollar un programa que dadas dos listas determine que elementos tiene la primer lista que no tenga la segunda lista.
 ```Python
-#no in
+#Elementos diferentes entre dos listas
 lista_a = [int(x) for x in input("Ingrese los elementos separados por espacio:  ").split()]
 lista_b = [int(x) for x in input("Ingrese los elementos separados por espacio:  ").split()]
 if len(lista_b)>len(lista_a):
@@ -255,7 +256,7 @@ Finalmente, el código imprime las listas 'lista_a', 'lista_b' y 'descuadre'. 'l
 
 Desarrollar un algoritmo que determine si una matriz es mágica. Se dice que una matriz cuadrada es mágica si la suma de cada una de sus filas, de cada una de sus columnas y de cada diagonal es igual.
 ```Python
-#matriz magica
+#Matriz magica
 matriz = []
 suma_de_filas = []
 suma_diagonal_principal=[]
