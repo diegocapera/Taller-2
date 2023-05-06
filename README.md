@@ -1,5 +1,6 @@
 # Taller-2
 **PUNTO 1**
+
 Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número.
 ```Python
 numero = int(input("Ingresa un número entero: "))
@@ -26,6 +27,7 @@ A continuación, se usa un bucle “while” para dividir el número por 10 y al
 Después de obtener todos los dígitos, se utiliza la función “reverse()” para invertir el orden de los dígitos en la lista. Finalmente, se muestra cada dígito de la lista, uno por uno, usando un bucle “for” y la función “print()”.
 
 **PUNTO 2**
+
 Desarrollar un programa que ingrese un número flotante n y separe su parte entera de la parte decimal, y luego entrege los digitos tanto de la parte entera como de la decimal.
 ```Python
 ##Entrada un numero flotante
@@ -43,6 +45,7 @@ Este código le pide al usuario que ingrese un número y lo almacena en la varia
 Por último, se llama a la función partes con el argumento numero, que es el número que el usuario ingresó anteriormente. De esta manera, la función se ejecuta y muestra la parte entera y la parte decimal del número ingresado por el usuario.
 
 **PUNTO 3**
+
 Desarrollar un programa que permita ingresar dos números enteros y determinar si se tratan de números espejos.
 ```Python
 #Numeros espejo
@@ -73,6 +76,7 @@ Después del bucle, se compara la cadena "espejo" con el número ingresado por e
 Finalmente, se llama a la función "espejo" pasando los argumentos "numero1" y "numero2" que se recopilaron al principio del programa.
 
 **PUNTO 4**
+
 Diseñar una función que permita calcular una aproximación de la función coseno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Taylor. nota: use math para traer la función coseno y mostrar la diferencia entre el valor real y la aproximación. Con cuántos valores de la serie, se tienen errores del 10%, 1%, 0.1% y 0.001%.
 ```Python
 #Coseno MacLaurin
@@ -103,6 +107,7 @@ Dentro del ciclo, se calcula el término de la serie actual utilizando la fórmu
 Finalmente se calcula el error porcentual de la aproximación y se imprime el valor de la serie, el error y el número de términos sumados.
 
 **PUNTO 5**
+
 Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
 ```Python
 print("Este programa le calcula el mcm y el mcd de n numeros")
@@ -172,6 +177,7 @@ elif(xddd.lower()=="mcd"):
 Este código es un programa que calcula el MCM (mínimo común múltiplo) y el MCD (máximo común divisor) de una lista de números. Primero, el programa solicita al usuario que ingrese una lista de números separados por espacio, y los convierte a una lista de enteros. Luego, el programa utiliza un algoritmo que descompone cada número en sus factores primos y almacena estos factores en listas separadas. Después, el programa utiliza un conjunto de diccionarios para determinar los factores comunes de cada número de la lista. Finalmente, el programa calcula el MCM y el MCD utilizando los factores comunes. Si el usuario ingresa "mcm", el programa devuelve el MCM de los números, y si el usuario ingresa "mcd", el programa devuelve el MCD de los números. El código utiliza principalmente ciclos for y condicionales if para realizar los cálculos necesarios.
 
 **PUNTO 6**
+
 Desarrollar un programa que determine si en una lista no existen elementos repetidos.
 ```Python
 #Repetidos
@@ -192,6 +198,7 @@ Después, el código busca elementos repetidos en la lista elementos_x, utilizan
 Finalmente, si no hay elementos repetidos en la lista elementos_x, se imprime "En esta lista no existen elementos repetidos". En caso contrario, los elementos repetidos se almacenan en la lista repetidos pero no se imprimen en este código.
 
 **PUNTO 7**
+
 Desarrollar un programa que determine si en una lista se encuentra una cadena de caracteres con dos o más vocales. Si la cadena existe debe imprimirla y si no existe debe imprimir 'No existe'.
 ```Python
 #Contador de vocales
@@ -217,6 +224,7 @@ La función contadorvocales busca las vocales en cada palabra de la lista y cuen
 En resumen, el programa imprimirá todas las palabras de la lista que contengan al menos dos vocales.
 
 **PUNTO 8**
+
 Desarrollar un programa que dadas dos listas determine que elementos tiene la primer lista que no tenga la segunda lista.
 ```Python
 #no in
@@ -244,6 +252,7 @@ Finalmente, el código imprime las listas 'lista_a', 'lista_b' y 'descuadre'. 'l
 **PUNTO 9**
 
 **PUNTO 10**
+
 Desarrollar un algoritmo que determine si una matriz es mágica. Se dice que una matriz cuadrada es mágica si la suma de cada una de sus filas, de cada una de sus columnas y de cada diagonal es igual.
 ```Python
 #matriz magica
