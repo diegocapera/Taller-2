@@ -1,5 +1,5 @@
 # Taller-2
-##PUNTO 1
+#PUNTO 1
 
 Este código separa los dígitos de un número entero ingresado por el usuario y los muestra de manera individual.
 
@@ -8,7 +8,7 @@ Primero, se pide al usuario que ingrese un número entero usando la función “
 A continuación, se usa un bucle “while” para dividir el número por 10 y almacenar el resto en una variable llamada “digito”. Luego, se agrega el dígito a la lista “digitos” y se actualiza el valor de “numero” dividiéndolo por 10. Este proceso se repite hasta que “numero” sea menor o igual a cero.
 
 Después de obtener todos los dígitos, se utiliza la función “reverse()” para invertir el orden de los dígitos en la lista. Finalmente, se muestra cada dígito de la lista, uno por uno, usando un bucle “for” y la función “print()”.
-##PUNTO 2
+#PUNTO 2
 
 Este código le pide al usuario que ingrese un número y lo almacena en la variable numero. Luego, se define una función llamada partes que toma un argumento a. Dentro de la función, el número ingresado por el usuario se convierte en un entero y se almacena en la variable a, mientras que la parte decimal del número se almacena en la variable b. Finalmente, la función imprime un mensaje que muestra la parte entera del número y la parte decimal.
 
