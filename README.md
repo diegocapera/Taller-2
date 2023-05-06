@@ -3,6 +3,7 @@
 
 Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número.
 ```Python
+#composicion de numeros
 numero = int(input("Ingresa un número entero: "))
 digitos = []
 
