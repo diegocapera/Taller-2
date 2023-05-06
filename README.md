@@ -9,14 +9,11 @@ Desarrollar un programa que ingrese un número entero n y separe todos los digit
 #Composicion de numeros
 numero = int(input("Ingresa un número entero: "))
 digitos = []
-
 while numero > 0:
     digito = numero % 10
     digitos.append(digito)
     numero = numero // 10
-
 digitos.reverse()
-
 print("Los dígitos separados son: ")
 for digito in digitos:
     print(digito)
