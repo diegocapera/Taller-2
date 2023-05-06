@@ -1,4 +1,7 @@
 # Taller-2
+
+Taller 2 hecho por Diego Alejandro Gutiérrez Capera para programacion de computadores grupo 6.
+
 **PUNTO 1**
 
 Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número.
@@ -312,3 +315,8 @@ Primero, se crea una matriz vacía, y se pide al usuario que ingrese los element
 Después, se definen varias funciones para invertir la matriz, sumar los elementos de cada fila y diagonal principal, y obtener la matriz traspuesta. Estas funciones se utilizan para verificar si la matriz es mágica. Si todas las sumas son iguales, la matriz es mágica y se imprime un mensaje indicando esto.
 
 El programa también utiliza la función limpiar para borrar las listas que se usan para almacenar las sumas de las filas y las diagonales principales, de manera que se puedan usar para almacenar las sumas de las filas y diagonales principales de la matriz traspuesta y la matriz invertida.
+
+Los archivos se encuentran comprimidos en:
+
+
+[Taller 2.zip](https://github.com/diegocapera/Taller-2/files/11412594/Taller.2.zip)
